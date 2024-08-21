@@ -1,0 +1,12 @@
+def check(s):
+    dem = 0
+    for i in range(len(s)):
+        if s[i] == '4' or s[i] =='7': 
+            dem+=1
+    if dem == 4 or dem == 7:return True
+    return False
+
+if __name__ == "__main__":
+    a = input()
+    if check(a) == True: print("YES")
+    else: print("NO")
