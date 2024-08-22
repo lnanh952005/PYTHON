@@ -1,0 +1,20 @@
+import math
+def tongchuso(uc):
+    sum = 0
+    while uc!=0:
+        sum += uc%10
+        uc//=10 
+    for i in range(2,int(math.sqrt(sum))+1):
+        if sum%i==0:return False
+    return sum>1
+
+if __name__ == "__main__":
+    t = int(input())
+    while t!=0:
+        a,b = map(int,input().split())
+        uc = math.gcd(a,b)
+        if tongchuso(uc)==True: print("YES")
+        else :print("NO")
+        t-=1
+
+        
